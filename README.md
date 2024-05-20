@@ -1,8 +1,7 @@
 # DotNetEcommerceWebApiAPI
 
-![Project Logo/Image]
+In my recent project, I spearheaded the development of a robust ecommerce platform akin to Talabat for Shopping. Leveraging a stack of cutting-edge technologies ,I engineered a scalable, secure, and feature-rich solution tailored to meet the dynamic demands of online retail.
 
-[Optional: Add a brief description of your project here]
 
 ## Table of Contents
 
