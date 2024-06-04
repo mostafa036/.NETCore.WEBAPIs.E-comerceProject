@@ -74,29 +74,29 @@ namespace Talabat.APIs
      
             var loggerFactory = services.GetRequiredService<ILoggerFactory>();
 
-            //try
-            //{
-            //    var context = services.GetRequiredService<TalabatContext>();
+            try
+            {
+                var context = services.GetRequiredService<TalabatContext>();
 
-            //    await context.Database.MigrateAsync();
+                await context.Database.MigrateAsync();
 
-            //    await TalabatContextSeed.SeedAsync(context, loggerFactory);
+                await TalabatContextSeed.SeedAsync(context, loggerFactory);
 
-            //    var identityContext = services.GetRequiredService<AppIdentityrDbContext>();
+                var identityContext = services.GetRequiredService<AppIdentityrDbContext>();
 
-            //    await identityContext.Database.MigrateAsync();
+               await identityContext.Database.MigrateAsync();
 
-            //    var usermanger = services.GetRequiredService<UserManager<AppUser>>();
+                var usermanger = services.GetRequiredService<UserManager<AppUser>>();
 
-            //    await AppIdentityDbContextSedd.SeedUserAsyns(usermanger);
+               await AppIdentityDbContextSedd.SeedUserAsyns(usermanger);
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    var logger = loggerFactory.CreateLogger<Program>();
+            }
+            catch (Exception ex)
+            {
+                var logger = loggerFactory.CreateLogger<Program>();
 
-            //    logger.LogError(ex, " An error occured during apply Migration");
-            //}
+                logger.LogError(ex, " An error occured during apply Migration");
+            }
 
             #endregion
 
